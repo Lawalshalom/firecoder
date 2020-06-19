@@ -1,0 +1,515 @@
+body {
+	font-family: "Nunito", sans-serif;
+	color: var(--black-color);
+	background-color: var(--white-color);
+	scroll-behavior: smooth;
+	transition: all 0.5s;
+	overflow-x: hidden;
+	background-attachment: fixed;
+  }
+
+  body{
+	--white-color: #fff;
+	--black-color: #555555;
+	--blue-color: #0066F6;
+	--blue-hover-color: #5faee3;
+  }
+
+.darkTheme{
+	--white-color: #243447;
+	--black-color: #fff;
+	--blue-color: #36D8FF;
+	--blue-hover-color: #5faee3;
+  }
+  #fragment {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+}
+	#page1{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+#portfolio{
+	position: relative;
+	top: 5rem;
+}
+  a {
+	color: var(--black-color);
+  }
+  
+  a:hover {
+	color: var(--blue-hover-color);
+	text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+	font-family: "Nunito", sans-serif;
+  }
+
+  #header{
+	height: 5rem;
+	z-index: 997;
+	transition: all 0.5s;
+	position: relative;
+	width: 90%;
+  }
+  #header h1{
+	  position: relative;
+	  left: 0;
+	  top: 0.1rem;
+	  animation: headerAnime 1.5s;
+  }
+@keyframes headerAnime {
+	0%{
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+  #header #blue-line{
+	  background: transparent url('img/Layer2.png') bottom / 8rem no-repeat padding-box;
+	  position: absolute;
+	  top: 0.1rem;
+	  left: 15rem;
+	  height: 10vh;
+	  width: 15vw;
+  }  
+
+#header #line-bottom{
+	background: transparent url('img/Layer2.png') top / contain no-repeat padding-box;
+	position: absolute;
+	top: 85vh;
+	right: 0rem;
+	height: 25vh;
+	width: 15vw;
+}
+  .nav-menu, .nav-menu * {
+	position: relative;
+	right: 0;
+	top: 0.1rem;
+	padding-right: 0.2rem;
+	list-style: none;  animation: navAnime 0.5s;
+}
+@keyframes navAnime {
+  0%{
+	  transform: translateY(-50px);
+	  opacity: 0;
+  }
+  100% {
+	  transform: translateY(0px);
+	  opacity: 1;
+  }
+}
+  .nav-menu > ul > li {
+	position: relative;
+	white-space: nowrap;
+	display: inline;
+  }
+  
+  .nav-menu a {
+	display: inline;
+	position: relative;
+	color: var(--black-color);
+	padding: 10px 0 12px 10px;
+	transition: 0.3s;
+	font-size: 1rem;
+	font-weight: 600;
+	font-family: "Open Sans", sans-serif;
+  }
+  
+  .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+	color: var(--blue-color);
+	text-decoration-line: underline;
+  }
+  
+  .nav-menu .get-started a {
+	background: var(--white-color);
+	color: var(--black-color);
+	border: 0.1rem solid var(--blue-color);
+	border-radius: 3rem;
+	margin: 0 0 0 0.3rem;
+	padding: 0.5rem 1rem;
+  }
+  .nav-menu .get-started i{
+	margin: 0.2rem;
+	position: relative;
+	top: 0.5rem;
+  }
+  
+  .nav-menu .get-started a:hover {
+	background: var(--blue-hover-color);
+	color: var(--white-color);
+  }
+  
+#about-me {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 80vh;
+	width: 100%;
+}  
+
+.pic1 {
+	position: relative;
+	background: transparent url('img/pic1.png') top no-repeat padding-box;
+	opacity: 1;
+	background-clip: border-box;  animation: pic1Anime 0.5s;
+}
+@keyframes pic1Anime {
+  0%{
+	  transform: translateX(50px);
+	  opacity: 0;
+  }
+  100% {
+	  transform: translateX(0px);
+	  opacity: 1;
+  }
+}
+
+#about-text{
+	position: relative;
+	top: 30%;
+	animation: aboutAnime 0.5s;
+}
+@keyframes aboutAnime {
+  0%{
+	  transform: translateX(-50px);
+	  opacity: 0;
+  }
+  100% {
+	  transform: translateX(0px);
+	  opacity: 1;
+  }
+}
+
+#about-text h1{
+	font-weight: 1000;
+	letter-spacing: 0.1rem;
+	text-shadow: 0.2rem;
+}
+
+#about-text h4{
+	font-weight: bold;
+}
+#about-text h5{
+	font-weight: bold;
+	margin-top: 2rem;
+}
+
+#about-text h6{
+	font-weight: 700;
+}
+
+.about-buttons{
+	display: flex;
+	animation: btnAnime 0.5s;
+}
+@keyframes btnAnime {
+  0%{
+	  transform: translateY(100px);
+	  opacity: 0;
+  }
+  100% {
+	  transform: translateY(0px);
+	  opacity: 1;
+  }
+}
+#about-text .hire{
+	position: absolute;
+	background: var(--blue-color);
+	color: var(--white-color);
+	border-radius: 3rem;
+	margin: 1rem 0 0 0;
+	padding: 0.7rem 1.5rem;
+	top: 16rem;
+}
+#about-text .portfolio{
+	position: absolute;
+	background:var(--white-color);
+	color: var(--black-color);
+	border-radius: 3rem;
+	margin: 1rem 0 0 0;
+	margin:  solid  var(--blue-color);
+	padding: 0.7rem 1.5rem;
+	left: 10rem;
+	top: 17rem;
+}
+#about-text .hire:hover{
+	opacity: 0.5;
+  }
+
+#about-text .portfolio:hover{
+	background: var(--blue-color);
+	color: var(--white-color);
+}
+
+#about-text .fa{
+	padding: 0.5rem;
+}
+#about-text .fa-twitter{
+	padding-left: 0;
+	margin-left: 0;
+}
+
+#portCont, #portContain {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 30rem;
+	width: 100%;
+}  
+.portfolio{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.portfolio h1{
+	font-weight: 1000;
+	color: var(--blue-color);
+	letter-spacing: 0.1rem;
+	padding-bottom: 0.2rem;
+}
+.portfolio h1 span {
+	text-decoration-line: underline;
+}
+.portfolio ul li{
+	list-style: none;
+}
+.portfolio .btn{
+	border-radius: 3rem;
+	margin: 0.5rem 0.5rem 0 0;
+	background-color: var(--blue-color);
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+}
+.tech-btn{
+	display: flex;
+}
+#portfolio-text{
+	border-left: 0.1rem outset var(--black-color);
+	padding-left: 3rem;
+	
+}
+#portfolio-text h3{
+	font-weight: bold;
+}
+
+
+#mount-img{
+	background: transparent  url('img/mountain.png') left / 20rem no-repeat padding-box;
+}
+
+#fruit-img{
+	background: transparent  url('img/fruit.png') right / 20rem no-repeat padding-box;
+}
+
+.text-right{
+	position: absolute;
+	right: 3rem;
+	top: 40%;
+	animation: headerAnime 2s;
+}
+@keyframes headerAnime {
+  0%{
+	  opacity: 0;
+  }
+  100% {
+	  opacity: 1;
+  }
+}
+.text-right .active{
+	font-weight: bolder;
+}
+.text-right li{
+	list-style: none;
+	position: relative;
+	margin-top: 0.7rem;
+	right: 0;
+}
+#contact{
+	position: relative;
+	top: 8rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 70vh;
+}
+#contact h1{
+	font-weight: 1000;
+	color: var(--blue-color);
+	letter-spacing: 0.1rem;
+	padding-bottom: 0.2rem;
+}
+#contact h1 span {
+	text-decoration-line: underline;
+}
+#contact h3{
+	font-weight: bold;
+}
+#namemail{
+	position: relative;
+	top: 5rem;
+	width: 60vw;
+	display: flex;
+	align-items: center;
+}
+#namemail .name{
+	position: relative;
+	left: 0;
+	margin: 0 8rem 0 0;
+}
+#form  label{
+	font-weight: bold;
+}
+#namemail .email{
+	position: relative;
+	margin: 0 5rem 0 5rem;
+}
+#textarea{
+	position: relative;
+	top: 7rem;
+}
+
+textarea, #namemail input{
+	background-color: var(--white-color);
+	border: 0;
+	border-bottom: 0.1rem solid var(--black-color);
+}
+
+textarea{
+	width: 55vw;
+}
+#textarea .submit{
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+#textarea .btn{
+	position: relative;
+	background-color: var(--blue-color);
+	top: 3rem;
+	font-size: 1.5rem;
+	padding: 0.5rem 2rem;
+}
+
+#contact .text-right{
+	position: absolute;
+	right: 3rem;
+	top: 20%;
+}
+
+#portfolio .text-right{
+	position: absolute;
+	right: -5rem;
+	top: 20%;
+}
+
+@media (max-width: 768px) {
+	html{
+		font-size: 0.6rem;
+		margin: 0 !important;
+	}
+	#header {
+	  position: absolute;
+	  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+	  height: 10vh;
+	  left: 1rem;
+	  background: var(--white-color);
+	}
+	#header h1{
+		font-size: 30px;
+	}
+  }
+  @media (max-width: 800px){
+	  body{
+		  overflow-x: hidden;
+	  }
+	  #header{
+		  width: 100%;
+	  }
+	  #about-text {
+		  position: relative;
+		  top: 0.2rem;
+	  }
+	  .pic1{
+		  position: relative;
+		  top: 0rem;
+		  height: 100%;
+	  }
+	 #about .text-right{
+		  position: absolute;
+		  left: 0;
+		  top: 40%;
+	  }
+	  #portfolio{
+		  position: relative;
+		  top: 10rem;
+		  height: 150vh;
+	  }
+	  #portCont{
+		  position: relative;
+		  top: 7rem;
+		  height: 150vh;
+	  }
+	  #portfolio-text{
+		position: relative;
+	  }
+	  #portfolio .text-right {
+		position: absolute;
+		right: 5rem;
+		top: 30%;
+		width: 3rem;
+	}
+	  #mount-img{
+		  position: relative;
+		  top: 12rem;
+		  left: 3vw;
+		  opacity: 1;
+		  background-size: contain;
+	  }
+	  #portfolio-text{
+		  position: absolute;
+		  top: -5rem;
+	  }
+	  #fruit-img{
+		  position: relative;
+		  top: 30rem;
+		  background-size: cover;
+		  height: 30vh;
+	  }
+
+	  #contact{
+		  position: relative;
+		  top: 50vh;
+	  }
+	  #contact .text-right{
+		  top: 40%;
+	  }
+	#namemail .email{
+	position: relative;
+	margin: 0 10rem 0 5rem;
+  }
+
+#namemail .name{
+	position: relative;
+	left: 0;
+	margin: 0 3rem 0 0;
+}
+}
+.clear-fix{
+	position: relative;
+	height: 100px;
+}
